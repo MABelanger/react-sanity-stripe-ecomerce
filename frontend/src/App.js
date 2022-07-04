@@ -1,11 +1,16 @@
-import logo from './logo.svg';
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
+function ComponentTmp() {
+  return <div className="cursive">tmp</div>
+}
 function App() {
   return (
-    <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
-  );
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<ComponentTmp />} />
+      </Routes>
+    </BrowserRouter>
+  )
 }
 
 export default App;
